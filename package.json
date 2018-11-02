@@ -1,0 +1,30 @@
+{
+  "name": "mocha-suite-level-skipping",
+  "version": "1.0.0",
+  "description": "Example of using hooks to skip entire suite when encountering a fail.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephting/mocha-suite-level-skipping.git"
+  },
+  "keywords": [
+    "mocha",
+    "testing"
+  ],
+  "author": "Joseph Ting",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josephting/mocha-suite-level-skipping/issues"
+  },
+  "homepage": "https://github.com/josephting/mocha-suite-level-skipping#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
