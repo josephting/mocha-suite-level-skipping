@@ -1,12 +1,10 @@
-# Suite Level Skipping on Mocha
+# Suite Level Skipping on Mocha (Page Level)
 
-Example of using hooks to skip entire suite when encountering a fail.
+Example of using hooks to skip entire test file when encountering a fail.
 
 Looking at the result below, you can see that:
 
-- Test will resume if the suite name is different despite of them being described within the same file.
-- Test will resume if the filename is different despite of them having the same suite name.
-- Able to run through all the suite and skip the remaining tests within a suite when encountering any fails within that specific suite.
+- Whenever a test fail, the whole test file will be skipped.
 
 ## Result
 
@@ -15,15 +13,15 @@ Looking at the result below, you can see that:
 
 
 
-  Use Case 1
-    ✓ should do addition maths correctly
-    1) should do subtraction maths correctly
-    - should do multiplication maths correctly
-    - should do division maths correctly
-
-  Use Case 1b
-    ✓ should do OP multiplication maths correctly
-    ✓ should do OP division maths correctly
+  User Case 1
+    Use Case 1a
+      ✓ should do addition maths correctly
+      1) should do subtraction maths correctly
+      - should do multiplication maths correctly
+      - should do division maths correctly
+    Use Case 1b
+      - should do OP multiplication maths correctly
+      - should do OP division maths correctly
 
   Use Case 2
     ✓ should eval undefined type to undefined
@@ -43,12 +41,13 @@ Looking at the result below, you can see that:
     ✓ should return value of type string
 
 
-  7 passing (18ms)
-  7 pending
+  5 passing (12ms)
+  9 pending
   3 failing
 
-  1) Use Case 1
-       should do subtraction maths correctly:
+  1) User Case 1
+       Use Case 1a
+         should do subtraction maths correctly:
 
       AssertionError: expected 1 to equal 0
       + expected - actual
@@ -56,7 +55,7 @@ Looking at the result below, you can see that:
       -1
       +0
 
-      at Context.<anonymous> (test/uc_1.spec.js:10:20)
+      at Context.<anonymous> (test/uc_1.spec.js:11:22)
 
   2) Use Case 2
        should eval boolean type to boolean:
