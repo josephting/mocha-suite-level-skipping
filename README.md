@@ -8,6 +8,8 @@ Looking at the result below, you can see that:
 - Test will resume if the filename is different despite of them having the same suite name.
 - Able to run through all the suite and skip the remaining tests within a suite when encountering any fails within that specific suite.
 
+See [`file-level-skip` branch](https://github.com/josephting/mocha-suite-level-skipping/tree/file-level-skip) for test file level skipping instead.
+
 ## Result
 
 ```bash
